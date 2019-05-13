@@ -1,0 +1,37 @@
+<div class="row">
+<div class="col-md" style="margin-left:20px;">
+  <table #dataTable class="table table-hover table-bordered">
+    <thead class="alert-danger">
+      <tr>
+          <td class="text-center">No</td>
+          <td class="text-center">Id</td>
+          <td class="text-center">Category</td>
+          <td class="text-center">MainCategory</td>
+          <td class="text-center">Status</td>
+          <td class="text-center">Supplier Name</td>
+          <td class="text-center">Price</td>
+          <td class="text-center">Quantity</td>
+          <!-- <td class="text-center">Image</td> -->
+          <td class="text-center">Details</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let subProd of Products;let i =index">
+          <td class="text-center">{{ i+1 }}</td>
+          <td class="text-center">{{ subProd.ProductId }}</td>
+          <td class="text-center">{{ subProd.Category }}</td>
+          <td class="text-center">{{ subProd.MainCategory }}</td>
+          <td class="text-center">{{ subProd.Status }}</td>
+          <td class="text-center">{{ subProd.SupplierName }}</td>
+          <td class="text-center">{{ subProd.Price }}</td>
+          <td class="text-center">{{ subProd.Quantity }}</td>
+          <!-- <td class="text-center"><img [src]="subProd.ProductPicUrl" width="60px" height="60px" ></td> -->
+          <td class="text-center"><button (click)="d(subProd)" class="btn btn-danger">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="col-md">
+  <img [src]="selectedProductImage" width="660px" height="600px">
+</div>
+</div>

@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<br />
+<div class="container">
+    <div class="col-md-12">
+        <h1 class="text-center alert-danger">Registeration Form</h1>
+        <form (ngSubmit)="AddProduct(subitForm)" #subitForm="ngForm" class="form-group">
+          <input type="text" class="form-control" placeholder="Enter Your name"  ngModel  name="name" #name="ngModel"  required>
+          <p class="alert-danger" *ngIf="!name.valid && name.touched">Username Is Required</p><br />
+          <input type="text" class="form-control" placeholder="Enter Your Email"  ngModel name="email" #email="ngModel" required email>
+          <p class="alert-danger" *ngIf="!email.valid && email.touched">Email Is Required</p><br />
+          <input type="text" class="form-control" placeholder="Enter Your Subject" ngModel name="subject" #subject="ngModel" required>
+          <p class="alert-danger" *ngIf="!subject.valid && subject.touched">ID Is Required</p><br />
+          <input type="text" class="form-control" placeholder="Enter Your Message" ngModel name="message" #message="ngModel" required>
+          <p class="alert-danger" *ngIf="!message.valid && message.touched">ID Is Required</p><br />
+          <button type="submit" class="btn btn-danger btn-block">Submit</button>
+        </form>
+    </div>
+</div>
+
+
